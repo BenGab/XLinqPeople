@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XLinqPeople", "XLinqPeople\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XlingPeople.Models", "XlingPeople.Models\XlingPeople.Models.csproj", "{FBDDCBD9-4A72-4AB1-86E0-58A817D9E657}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xlinq.People.Filter", "Xlinq.People.Filter\Xlinq.People.Filter.csproj", "{986FD829-D054-4AC0-9FD6-81F018441813}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FBDDCBD9-4A72-4AB1-86E0-58A817D9E657}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBDDCBD9-4A72-4AB1-86E0-58A817D9E657}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBDDCBD9-4A72-4AB1-86E0-58A817D9E657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986FD829-D054-4AC0-9FD6-81F018441813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986FD829-D054-4AC0-9FD6-81F018441813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986FD829-D054-4AC0-9FD6-81F018441813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986FD829-D054-4AC0-9FD6-81F018441813}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
