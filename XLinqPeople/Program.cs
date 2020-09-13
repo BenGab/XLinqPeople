@@ -2,6 +2,7 @@
 using System.Linq;
 using XlingPeople.Models.Models;
 using Xlinq.People.Filter;
+using XLinqPeople.Extensions;
 
 namespace XLinqPeople
 {
@@ -31,6 +32,18 @@ namespace XLinqPeople
                                 person.Name,
                                 NameLength = person.Name.Length
                             };
+
+            minmaxLen.ToConsole();
+
+            var numberofdepartments = from person in people
+                                      group person by person.Dept into depgroup
+                                      select new
+                                      {
+                                          Dept = depgroup.Key,
+                                          Num = depgroup.Count()
+                                      };
+
+            numberofdepartments.ToConsole();
         }
     }
 }
