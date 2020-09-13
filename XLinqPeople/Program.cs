@@ -15,6 +15,11 @@ namespace XLinqPeople
             var people = People.LoadXml(dataSourceUrl);
 
             var depts = people.NumberOfDepartment("Alkalmazott Informatikai Intézet");
+
+            for (int i = 1; i <= 5; i++)
+            {
+                var page = people.ToPaged(x => x.Dept == "Alkalmazott Informatikai Intézet", i, 10);
+            }
         }
     }
 }
