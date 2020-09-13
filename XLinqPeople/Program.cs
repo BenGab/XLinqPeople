@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using XlingPeople.Models.Models;
 using Xlinq.People.Filter;
 
@@ -20,6 +21,16 @@ namespace XLinqPeople
             {
                 var page = people.ToPaged(x => x.Dept == "Alkalmazott Informatikai Intézet", i, 10);
             }
+
+            var minmaxLen = from person in people
+                            let minlen = people.Min(x => x.Name.Length)
+                            let maxlen = people.Max(x => x.Name.Length)
+                            where person.Name.Length == minlen || person.Name.Length == maxlen
+                            select new
+                            {
+                                person.Name,
+                                NameLength = person.Name.Length
+                            };
         }
     }
 }
