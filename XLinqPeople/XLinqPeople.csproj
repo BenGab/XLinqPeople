@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XlingPeople.Models\XlingPeople.Models.csproj" />
+    <ProjectReference Include="..\Xlinq.People.Filter\Xlinq.People.Filter.csproj" />
+  </ItemGroup>
+
 </Project>
