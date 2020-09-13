@@ -10,9 +10,9 @@ namespace XLinqPeople
     class Program
     {
 
-        static IEnumerable<int> Range(int start, int end, int step=1)
+        static IEnumerable<int> Range(int start, int end, int step = 1)
         {
-            for (int i=start; i<=end; i+=step)
+            for (int i = start; i <= end; i += step)
             {
                 yield return i;
             }
@@ -59,7 +59,7 @@ namespace XLinqPeople
             Console.WriteLine(biggestdep);
 
             Console.WriteLine("************** Generator *****************");
-            foreach(var item in Range(1, 1000))
+            foreach (var item in Range(1, 1000))
             {
                 Console.WriteLine(item);
             }
