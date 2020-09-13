@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using XlingPeople.Models.Models;
 using Xlinq.People.Filter;
@@ -8,6 +9,15 @@ namespace XLinqPeople
 {
     class Program
     {
+
+        static IEnumerable<int> Range(int start, int end, int step=1)
+        {
+            for (int i=start; i<=end; i+=step)
+            {
+                yield return i;
+            }
+        }
+
         static void Main(string[] args)
         {
             const string dataSourceUrl = "http://users.nik.uni-obuda.hu/prog3/_data/people.xml";
@@ -44,6 +54,15 @@ namespace XLinqPeople
                                       };
 
             numberofdepartments.ToConsole();
+
+            var biggestdep = numberofdepartments.OrderByDescending(x => x.Num).FirstOrDefault();
+            Console.WriteLine(biggestdep);
+
+            Console.WriteLine("************** Generator *****************");
+            foreach(var item in Range(1, 1000))
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
